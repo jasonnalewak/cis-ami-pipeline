@@ -17,7 +17,6 @@ pipeline {
         stage('Local Testing') {
             steps {
                 script {
-                    sh 'cookstyle .'
                     sh 'foodcritic . --tags ~FC005,~FC022,~FC070,~FC078,~FC004,~FC048'
                 }
             }
