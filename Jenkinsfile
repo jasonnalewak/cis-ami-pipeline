@@ -18,6 +18,8 @@ pipeline {
             steps {
                 script {
                     sh 'foodcritic . --tags ~FC005,~FC022,~FC070,~FC078,~FC004,~FC048'
+                    sh 'chef --version'
+                    sh 'vagrant --version'
                 }
             }
         }
